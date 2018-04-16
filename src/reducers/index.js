@@ -3,7 +3,6 @@ const estadoInicial = {
   angular: 0,
   vuejs: 0
 };
-
 export default (state = estadoInicial, action) => {
   switch (action.type) {
     case "voto_react":
@@ -11,6 +10,7 @@ export default (state = estadoInicial, action) => {
       return Object.assign({}, state, {
         react: state.react + 1
       });
+
 
     case "voto_angular":
       console.log("voto angular");

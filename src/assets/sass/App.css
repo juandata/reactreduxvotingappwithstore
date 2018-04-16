@@ -2,3 +2,8 @@
   height: 66px;
   cursor: pointer;
 }
+.Descipcion {
+  text-align: center;
+  border: solid;
+  background-color: cadetblue;
+}
