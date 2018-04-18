@@ -1,0 +1,17 @@
+REDUX:
+1. Determinar el evento que disparará el cambio de estado en el store, por ejemplo sumar uno cada click.
+2. En la función que se dispara con el evento despachar al store la acción que cambiará el objeto estado: store.dispatch(acción());
+3. El .js que contiene las acciones está conformado por arrow functions que retornan un objeto con propiedad type. 
+4. En store es necesario crear un store: createStore(reducer, opciones); -y exportarlo. En el store también se importa /reducers. 
+5. Finalmente en .js reducers se establece un estado inicial y se exporta un objeto: export default (state = initialState, action) => { switch()... }
+En reducers se realiza lo más importante ya que allí se encuentra el switch que compara el typo de acción (predefinido en acciones) y dependiendo del tipo se retorna
+un nuevo objeto con el estado modificado (el estado inicial): 
+return Object.assign({}, state, {
+estadoinicialamodificar: modificación
+});
+
+ROUTER:
+1.Se encapsula la aplicaición dentro de un <Router> tag, la cual se importa de "react-router-dom". 
+2. Las routas se especifican con un <Route> tag en la propiedad path="/laruta" y el componente a renderizar una vez esta ruta coincide en el navegador se retorna
+con la propiedad render: render{() => (<ComponenteaRenderizar/>)}
+3. Los <Links> tags remplazan los <a> tags así: <Link to={"/laruta"]>

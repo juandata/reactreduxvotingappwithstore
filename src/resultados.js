@@ -19,6 +19,7 @@ export default class Resultado extends Component {
       return 0;
     }
   }
+
   votesAngularInPercent() {
     if (store.getState().angular) {
       return (
@@ -65,7 +66,7 @@ export default class Resultado extends Component {
     return (
       <div>
         <span className="label label-danger">
-          React: {this.votesReactInPercent().toFixed(2) + "%"}
+          React: {this.votesReactInPercent().toFixed(2) + "%"} 
         </span>
         <div className="progress progress-striped active">
           <div
